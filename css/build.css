@@ -83,5 +83,16 @@ body {
   text-align: right;
 }
 
+.name {
+  position: absolute;
+  left: 40px;
+  top: 40px;
+}
+.name h1 {
+  font-weight: 400;
+  font-size: 5.5rem;
+  color: #0a2426;
+  font-family: "Almond Cookies";
+}
 
 /*# sourceMappingURL=build.css.map */
