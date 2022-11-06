@@ -93,6 +93,7 @@
             position: relative;
           
             .image {
+                    display: block;
                 display: block;
                 border-radius: 150px 150px 30px 30px;
             }
@@ -111,7 +112,7 @@
                 transition: .5s ease;
             }
 
-            .prez:hover .overlay {
+            &:hover .overlay {
                 bottom: 0;
                 height: 100%;
             }
