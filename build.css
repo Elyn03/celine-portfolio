@@ -55,13 +55,13 @@ body {
 }
 .debut .menu .contact img {
   height: 50px;
-  width: auto;
+  width: 50px;
   border-radius: 50%;
 }
 .debut .menu .contact img:hover {
   box-shadow: 0px 0px 15px #fff;
   height: 60px;
-  width: auto;
+  width: 60px;
 }
 
 .debut .footer {
@@ -144,6 +144,10 @@ body {
   width: auto;
   border-radius: 150px 150px 30px 30px;
 }
+.me .content .image img {
+  height: 500px;
+  width: auto;
+}
 .me .content .overlay {
   position: absolute;
   bottom: 100%;
@@ -197,12 +201,12 @@ body {
 }
 .sk .content .skill .logos img {
   height: 100px;
-  width: auto;
+  width: 100px;
   filter: grayscale(100%);
 }
 .sk .content .skill .logos img:hover {
   height: 110px;
-  width: auto;
+  width: 110px;
   filter: grayscale(0%);
 }
 .sk .content .skill:hover {

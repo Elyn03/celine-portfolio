@@ -44,12 +44,12 @@
             
 
             img {
-                @include abstracts.size(50px, auto);
+                @include abstracts.size(50px, 50px);
                 border-radius: 50%;
 
                 &:hover {
                     box-shadow: 0px 0px 15px #fff;
-                    @include abstracts.size(60px, auto);
+                    @include abstracts.size(60px, 60px);
                 }
             }            
         }

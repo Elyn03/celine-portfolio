@@ -39,11 +39,11 @@
                 justify-content: space-between;
 
                 img {
-                    @include abstracts.size(100px, auto);
+                    @include abstracts.size(100px, 100px);
                     filter: grayscale(100%);
                     
                     &:hover {
-                        @include abstracts.size(110px, auto);
+                        @include abstracts.size(110px, 110px);
                         filter: grayscale(0%);
                     }
                 }

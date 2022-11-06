@@ -82,6 +82,9 @@
             display: block;
             @include abstracts.size(500px, auto);
             border-radius: 150px 150px 30px 30px;
+            img{
+                @include abstracts.size(500px, auto);
+            }
           }
 
           .overlay {
