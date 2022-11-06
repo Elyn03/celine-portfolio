@@ -28,3 +28,5 @@ Finally, what are the actions implemented in my repository :
 I choose to activate 2 apps from the marketplace :
 - the first one is "Imgbot" because it helps to optimize all the images thats are present in the project  
 - the second one is "CodeFactor" because it ensures that my code meets with the quality standards with a review that takes only few seconds
+
+Don't hesitate to contact me if you find any bug or just wanna talk about my code ^^

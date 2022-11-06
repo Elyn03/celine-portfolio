@@ -95,6 +95,10 @@ body {
   text-align: right;
   grid-area: footer;
 }
+.debut .footer a {
+  text-decoration: none;
+  color: #d8e3d3;
+}
 
 .me {
   grid-area: me;
@@ -437,7 +441,7 @@ body {
   }
 }
 .debut .titre {
-  font-size: 40px;
+  font-size: 30px;
   background-color: #0f4237;
   color: #5b896d;
   display: flex;

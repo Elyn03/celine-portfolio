@@ -4,15 +4,33 @@
 
   <head>
 
+    <!-- SEO -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="keywords" content="portfolio developer student">
-    <meta name="description" content="Hi, congratulation for finding my porfolio! I'm a junior developper and I'm going to show you little what I did during those 2 years attending IIM.">
+    <meta name="keywords" content="portfolio junior developer student">
+    <meta name="description" content="Hi, congratulation for finding my porfolio! I'm a Céline Eap a junior 
+    developper who is currently in her 2nd year at IIM university in the Coding & Digital Innovation course.
+    I'm going to show you little what I did during those 2 years attending IIM.">
     <meta name="author" content="Céline Eap">
-    <meta http-equiv="refresh" content="30">
+
+    <!--witch page should be prioritized? -->
+    <link href="https://elyn03.github.io/celine-portfolio/" rel="canonical">
+
+    <!-- the informations about the page when shared via social channels -->
+    <meta property="og:title" content="Céline's portfolio" />
+    <meta property="og:type" content="portfolio" />
+    <meta property="og:description" content="A 2nd year student codes her postfolio, how is it?" />
+    <meta property="og:url" content="https://elyn03.github.io/celine-portfolio/" />
+    <meta property="og:image" content="img/pp.jpg" />
+    
+    <!-- witch pages shoud be indexed or not? -->
+    <meta name="robots" content="index, follow">
+
+
     <link rel="icon" href="img/logo.ico" />
     <title>Portfolio Céline Eap</title>
 
+    <!-- encoded as JSON-LD in a HTML script tag find at schema.org -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -24,7 +42,7 @@
           "streetAddress": "70, Avenue du Général de Gaulle"
         },
         "email": "mailto:eapceline@gmail.com",
-        "image": "pp.jpg",
+        "image": "img/pp.jpg",
         "jobTitle": "Student",
         "name": "Céline Eap",
         "telephone": "0769362969",
@@ -40,10 +58,11 @@
 
   <body>
 
-    <button id="btt">⇧</button>
+    <!-- <button id="btt">⇧</button> -->
 
     <div class="wrapper">
 
+      <!-- parallax -->
       <div class="parallax__group hero-container">
         <div class="parallax__layer sky"></div>
         <div class="parallax__layer mountains"></div>
@@ -56,6 +75,7 @@
 
       <div class="debut">
 
+        <!-- menu -->
         <div class="menu section animate__fadeInRightBig" section>
 
           <div class="section">
@@ -75,10 +95,11 @@
 
         <div class="tout">
 
+          <!-- about me -->
           <section id="1" class="pt me">
 
             <div class="animate__boundeIn titre">
-              ⸙ About me
+              <h1>⸙ About me</h1>
             </div>
 
             <div class="content">
@@ -109,17 +130,18 @@
 
           </section>
 
+          <!-- my skills -->
           <section id="2" class="pt sk">
 
             <div class="titre autre">
-              ⸙ Skills
+              <h1>⸙ Skills</h1>
             </div>
 
             <div class="content">
 
               <div class="skill front">
 
-                <a class="type">Frontend</a>
+                <h2><a class="type">Front-end</a></h2>
 
                 <div class="logos">
                   <img src="img/skills/html.png" alt="html_logo">
@@ -133,7 +155,7 @@
 
               <div class="skill end">
 
-                <a class="type">Backend</a>
+                <h2><a class="type">Back-end</a></h2>
 
                 <div class="logos">
                   <img src="img/skills/python.png" alt="python_logo">
@@ -145,7 +167,7 @@
 
               <div class="skill other">
                 
-                <a class="type">Others</a>
+                <h2><a class="type">Others</a></h2>
 
                 <div class="logos">
                   <img src="img/skills/ps.png" alt="photoshop_logo">
@@ -161,10 +183,11 @@
 
           </section>
           
+          <!-- my projects -->
           <section id="3" class="pt pr">
 
             <div class="titre autre">
-              ⸙ Projects
+              <h1>⸙ Projects</h1>
             </div>
 
             <div class="content">
@@ -224,9 +247,9 @@
 
         </div>
         
-
+        <!-- footer -->
         <footer class="footer">
-        Copyright © 2022 - Tout Droits Réservés | <a href="map.html">Site map</a>
+          Copyright © 2022 - All rights reserved. | <a href="map.html">Site map</a>
         </footer>
       
       </div>
