@@ -19,17 +19,20 @@
             opacity: 25%;
             gap: 20px;
 
-                .type {
-                    margin: 25px;
-                    padding: 10px;
-                    color: #d8e3d3;
-                    background-color: #092523;
+            @include abstracts.breakpoint() {
+                @include abstracts.size(auto, 500px);
+            }
 
-                    a {
-                        font-size: 30px;
-                    }
+            .type {
+                margin: 25px;
+                padding: 10px;
+                color: #d8e3d3;
+                background-color: #092523;
 
+                a {
+                    font-size: 30px;
                 }
+            }
 
             .logos {
                 padding: 20px;
@@ -41,10 +44,18 @@
                 img {
                     @include abstracts.size(100px, 100px);
                     filter: grayscale(100%);
+
+                    @include abstracts.breakpoint() {
+                        @include abstracts.size(60px, 60px);
+                    }
                     
                     &:hover {
                         @include abstracts.size(110px, 110px);
                         filter: grayscale(0%);
+
+                        @include abstracts.breakpoint() {
+                            @include abstracts.size(70px, 70px);
+                        }
                     }
                 }
             }

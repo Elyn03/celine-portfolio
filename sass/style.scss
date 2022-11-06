@@ -2,6 +2,7 @@
 @use "layout";
 @use "abstracts";
 @use "components";
+@import 'node_modules/animate.css';
 
 .wrapper {
     height: 100vh;
@@ -14,6 +15,11 @@
     position: relative;
     @include abstracts.size(100vh, 100vw);
     transform-style: preserve-3d;
+
+    @include abstracts.breakpoint() {
+        @include abstracts.size(100vh, auto);
+        display: none;
+    }
 }
 
 .parallax__layer {
@@ -40,6 +46,13 @@
     @include abstracts.layer('img/4.png', -0, 1, 5);
 }
 
+.respo {
+    @include abstracts.breakpoint() {
+        @include abstracts.size(auto, 100vw);
+    background-color: aqua;
+    }
+}
+
 .debut {
     background: #092523;
     transform: translateZ(0) scale(1);
@@ -50,6 +63,13 @@
     grid-template-columns: 15fr 1fr;
     grid-template-areas: "tout   fix"
                          "footer  footer";
+
+    @include abstracts.breakpoint() {
+        grid-template-columns: 15fr 1fr;
+        grid-template-areas: "contact   contact"
+                             "tout      tout"
+                             "footer    footer";
+    }
     
     .titre {
         font-size: 40px;
@@ -63,6 +83,10 @@
         font-family: "Wonder Magic Free Trial";
         border-radius: 0 10px 50px 0;
         letter-spacing:10px;
+
+        @include abstracts.breakpoint() {
+            max-width: 350px;
+        }
     }
 
     .tout {
@@ -73,6 +97,9 @@
                              "skills"
                              "projects";
 
+        @include abstracts.breakpoint() {
+            grid-area: tout;
+        }
 
         .autre {
             margin-top: 50px;
