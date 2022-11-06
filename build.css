@@ -71,6 +71,228 @@ body {
   grid-area: footer;
 }
 
+.me {
+  grid-area: me;
+}
+.me .content {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-areas: "titre     photo" "prez      photo";
+}
+.me .content .title {
+  grid-area: titre;
+  position: relative;
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.me .content .title .rotate-word {
+  display: inline;
+  margin-left: 10px;
+  font-size: 40px;
+}
+.me .content .title .rotate-word span {
+  width: max-content;
+  position: absolute;
+  background-color: #5b896d;
+  color: #092523;
+  padding-inline: 10px;
+  opacity: 0;
+  transform-origin: 10% 75%;
+  animation: rotateWords 12s var(--d) linear infinite;
+  z-index: 10;
+}
+@keyframes rotateWords {
+  5% {
+    opacity: 1;
+  }
+  10%, 20% {
+    opacity: 1;
+    transform: rotate(3deg);
+  }
+  15% {
+    transform: rotate(-1deg);
+  }
+  25% {
+    opacity: 0;
+    transform: translateY(90px);
+    rotate: 10deg;
+  }
+}
+.me .content .blabla {
+  grid-area: prez;
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+  padding: 30px;
+  font-size: large;
+}
+.me .content .prez {
+  grid-area: photo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.me .content .image {
+  display: block;
+  height: 500px;
+  width: auto;
+  border-radius: 150px 150px 30px 30px;
+}
+.me .content .overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  height: 0;
+  width: 100%;
+  transition: 0.5s ease;
+}
+.me .content .prez:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.sk {
+  grid-area: skills;
+}
+.sk .content {
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  row-gap: 20px;
+}
+.sk .content .skill {
+  position: relative;
+  height: auto;
+  width: 300px;
+  border: 3px solid #d8e3d3;
+  border-radius: 20px;
+  opacity: 25%;
+  gap: 20px;
+}
+.sk .content .skill .type {
+  margin: 25px;
+  padding: 10px;
+  color: #d8e3d3;
+  background-color: #092523;
+}
+.sk .content .skill .type a {
+  font-size: 30px;
+}
+.sk .content .skill .logos {
+  padding: 20px;
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.sk .content .skill .logos img {
+  height: 100px;
+  width: auto;
+  filter: grayscale(100%);
+}
+.sk .content .skill .logos img:hover {
+  height: 110px;
+  width: auto;
+  filter: grayscale(0%);
+}
+.sk .content .skill:hover {
+  box-shadow: 0px 5px 5px #d8e3d3;
+  opacity: 100%;
+}
+
+.pr {
+  grid-area: projects;
+}
+.pr .content {
+  padding: 30px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pr .content figure {
+  position: relative;
+  height: 250px;
+  width: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #0a2426;
+}
+.pr .content figure figcaption::before {
+  content: "";
+  position: absolute;
+  inset: 40px 50px;
+  border: 2px solid #fff;
+  opacity: 0;
+  scale: 1;
+  transition: opacity 0.25s, scale 0.25s;
+  border-radius: 10px;
+}
+.pr .content figure:hover figcaption::before {
+  opacity: 1;
+  scale: 1.15;
+}
+.pr .content figure:hover img {
+  opacity: 0.35;
+  scale: 1.15;
+}
+.pr .content figure:hover p {
+  opacity: 1;
+  translate: 0;
+}
+.pr .content figure img {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+  scale: 1;
+  transition: opacity 0.25s, scale 0.35s;
+}
+.pr .content figure figcaption {
+  position: absolute;
+  inset: 0;
+  padding: 50px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.pr .content figure p {
+  opacity: 0;
+  translate: -25px;
+  transition: opacity 0.25s, translate 0.25s;
+}
+
+#btt {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  font-size: 26px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  color: #fff;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  backdrop-filter: blur(5px);
+  background-color: rgba(15, 66, 55, 0.3725490196);
+  z-index: 10;
+}
+
 .wrapper {
   height: 100vh;
   overflow-x: hidden;
@@ -130,6 +352,28 @@ body {
   display: grid;
   grid-template-columns: 15fr 1fr;
   grid-template-areas: "tout   fix" "footer  footer";
+}
+.debut .titre {
+  font-size: 40px;
+  background-color: #0f4237;
+  color: #5b896d;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  max-width: 500px;
+  padding: 0px 30px;
+  font-family: "Wonder Magic Free Trial";
+  border-radius: 0 10px 50px 0;
+  letter-spacing: 10px;
+}
+.debut .tout {
+  grid-area: tout;
+  scroll-behavior: smooth;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "me" "skills" "projects";
+}
+.debut .tout .autre {
+  margin-top: 50px;
 }
 
 .name {

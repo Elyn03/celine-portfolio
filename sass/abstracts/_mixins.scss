@@ -9,3 +9,9 @@
     height: $height;
     width: $width;    
 }
+
+@mixin breakpoint($width: 930px) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}

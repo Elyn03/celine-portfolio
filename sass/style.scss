@@ -50,6 +50,35 @@
     grid-template-columns: 15fr 1fr;
     grid-template-areas: "tout   fix"
                          "footer  footer";
+    
+    .titre {
+        font-size: 40px;
+        background-color: #0f4237;
+        color: #5b896d;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        max-width: 500px;
+        padding: 0px 30px;
+        font-family: "Wonder Magic Free Trial";
+        border-radius: 0 10px 50px 0;
+        letter-spacing:10px;
+    }
+
+    .tout {
+        grid-area: tout;
+        scroll-behavior: smooth;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "me"
+                             "skills"
+                             "projects";
+
+
+        .autre {
+            margin-top: 50px;
+        }
+    
+    }
 
 }
   

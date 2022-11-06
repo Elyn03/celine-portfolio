@@ -1,0 +1,102 @@
+@use "../abstracts";
+
+.me {
+    grid-area: me;
+
+    .content {
+        padding: 30px;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas: "titre     photo"
+                             "prez      photo";
+
+        .title {
+            grid-area: titre;
+            position: relative;
+            font-size: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+
+            .rotate-word {
+                display: inline;
+                margin-left: 10px;
+                font-size: 40px;
+            
+
+                span {
+                    width: max-content;
+                    position: absolute;
+                    background-color: #5b896d;
+                    color: #092523;
+                    padding-inline: 10px;
+                    opacity: 0;
+                    transform-origin: 10% 75%;
+                    animation: rotateWords 12s
+                    var(--d) linear infinite;
+                    z-index: 10;
+                }
+            
+                @keyframes rotateWords {
+                    5% {
+                        opacity: 1;
+                    }
+                    10%,
+                    20% {
+                        opacity: 1;
+                        transform: rotate(3deg);
+                    }
+                    15% {
+                        transform: rotate(-1deg);
+                    }
+                    25% {
+                        opacity: 0;
+                        transform: translateY(90px);
+                        rotate: 10deg;
+                    }
+                }
+            }
+        
+        }
+
+        .blabla {
+            grid-area: prez;
+            display: flex;
+            justify-content: center;
+            text-align: justify;
+            padding: 30px;
+            font-size: large;
+        }
+
+        .prez {
+            grid-area: photo;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+          }
+          
+          .image {
+            display: block;
+            @include abstracts.size(500px, auto);
+            border-radius: 150px 150px 30px 30px;
+          }
+
+          .overlay {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            right: 0;
+            overflow: hidden;
+            @include abstracts.size(0, 100%);
+            transition: .5s ease;
+          }
+
+          .prez:hover .overlay {
+            bottom: 0;
+            height: 100%;
+          }
+    }
+}
