@@ -1,0 +1,21 @@
+@use "../abstracts";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    @include abstracts.size(100%, 100%);
+    color: #d8e3d3;
+    background-color: #092523;
+    font-family: 'Montserrat';
+}
+
+@font-face {
+    font-family: "Wonder Magic Free Trial";
+    font-family: "Montserrat";
+    src: url("../fonts/Wonder Magic Free Trial.ttf") format("ttf");
+    src: url("../fonts/Montserrat-Regular.ttf") format("ttf");
+}

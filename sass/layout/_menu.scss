@@ -1,0 +1,58 @@
+@use "../abstracts";
+
+.debut {
+
+    .menu {
+        grid-area: fix;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+
+        .section{
+            position: sticky;
+            top: 15%;
+            text-align: end;
+            
+            .dot {
+                color: #d8e3d3;
+                text-decoration: none;
+
+                &:hover {
+                    color: #092523;
+                }
+
+                .dots {
+                    min-height: 20px;
+                     min-width: 125px;
+                        
+                    &:hover {
+                        background-color: #a9c8a4;
+                        border-radius: 30px;
+                        font-size: large;
+                    }
+                }
+            }
+        }
+        
+        .contact {
+            position: sticky;
+            top: 35%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            row-gap: 1ch;
+            
+
+            img {
+                @include abstracts.size(50px, auto);
+                border-radius: 50%;
+
+                &:hover {
+                    box-shadow: 0px 0px 15px #fff;
+                    @include abstracts.size(60px, auto);
+                }
+            }            
+        }
+
+    }
+}
