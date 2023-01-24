@@ -10,16 +10,14 @@ body {
     @include abstracts.size(100%, 100%);
     color: #d8e3d3;
     background-color: #092523;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
 }
 
 @font-face {
     font-family: "DK Millefeuille";
-    font-family: "Wonder Magic Free Trial";
-    font-family: "Bagola";
     font-family: "Montserrat";
+    font-family: "Doggie";
     src: url("../../fonts/DK\ Millefeuille.otf") format("otf");
-    src: url("../../fonts/Wonder\ Magic\ Free\ Trial.ttf") format("ttf");
     src: url("../../fonts/Montserrat-Regular.ttf") format("ttf");
-    src: url("../../fonts/Bagola.otf") format("otf");
+    src: url("../../fonts/Doggie.ttf") format("ttf");
 }

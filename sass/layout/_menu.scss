@@ -9,25 +9,36 @@
         flex-direction: column;
 
         @include abstracts.breakpoint() {
+            grid-area: contact;
             grid-area: unset;
             display: flex;
+            flex-direction: column-reverse;
+            gap: 30px;
         }
         
         .section{
             position: sticky;
             top: 15%;
             text-align: end;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
             
             @include abstracts.breakpoint() {
                 grid-area: unset;
-                position: fixed;
                 top: 20px;
                 right: 20px;
+                display: flex;
+                justify-content: space-around;
             }
 
             .dot {
                 color: #d8e3d3;
                 text-decoration: none;
+
+                @include abstracts.breakpoint() {
+                    text-align: center;
+                }
 
                 &:hover {
                     color: #092523;
@@ -35,12 +46,17 @@
 
                 .dots {
                     min-height: 20px;
-                    min-width: 125px;
+                    min-width: 130px;
+                    padding: 5px;
+
+                    @include abstracts.breakpoint() {
+                        min-width: 200px;
+                    }
                     
                     &:hover {
                         background-color: #a9c8a4;
                         border-radius: 30px;
-                        font-size: large;
+                        font-weight: bolder;
                     }
                 }
             }
@@ -55,10 +71,10 @@
             row-gap: 1ch;
 
             @include abstracts.breakpoint() {
-                grid-area: contact;
                 flex-direction: row;
                 display: flex;
                 justify-content: space-around;
+                position: relative;
             }
             
 

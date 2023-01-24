@@ -13,13 +13,8 @@
 
 .parallax__group {
     position: relative;
-    @include abstracts.size(100vh, 100vw);
+    @include abstracts.size(100vh, 1fr);
     transform-style: preserve-3d;
-
-    @include abstracts.breakpoint() {
-        @include abstracts.size(100vh, auto);
-        display: none;
-    }
 }
 
 .parallax__layer {
@@ -80,9 +75,9 @@
         justify-content: right;
         max-width: 500px;
         padding: 0px 30px;
-        font-family: "Bagola";
         border-radius: 0 10px 50px 0;
         letter-spacing:10px;
+        font-family: "DK Millefeuille";
 
         @include abstracts.breakpoint() {
             max-width: 350px;
@@ -122,6 +117,7 @@
         font-weight: 400;
         font-size: 5.5rem;
         font-family: "DK Millefeuille";
+
 
         display:inline-block;
         vertical-align: middle;
