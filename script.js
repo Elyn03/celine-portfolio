@@ -1,26 +1,43 @@
+let keyboard = ''
+const sky = document.getElementById('sky')
+const mountains = document.getElementById('mountains')
+const trees2 = document.getElementById('trees2')
+const trees1 = document.getElementById('trees1')
+const para = document.getElementById('ara')
+
 /******** Back to Top ********/
 
-const scrollup = document.querySelector("#btt");
+// const scrollup = document.querySelector("#btt");
 
-scrollup.addEventListener("click", function () {
-    window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "smooth"
-    });
-});
+// scrollup.addEventListener("click", function () {
+//     window.scrollTo({
+//         top: 0,
+//         left: 0,
+//         behavior: "smooth"
+//     });
+// });
 
 /******** animation typing texte ********/
 
-var i=0, text;
-text="Portfolio CH"
+let glowInTexts = document.querySelectorAll(".glowIn");
+glowInTexts.forEach(glowInText => {
+  let letters = glowInText.textContent.split("");
+  glowInText.textContent = "";
+  letters.forEach((letter, i) => {
+    let span = document.createElement("span");
+    span.textContent = letter;
+    span.style.animationDelay = `${i * 0.05}s`;
+    glowInText.append(span);
+  });
+});
 
-function typing(){
-    if(i<text.length){
-        document.getElementById("texte").innerHTML+=text.charAt(i);
-        i++;
-        setTimeout(typing, 50);
-    }
-}
 
-typing();
+document.querySelectorAll('a[href="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});

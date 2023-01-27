@@ -4,6 +4,9 @@
 @use "components";
 @import 'node_modules/animate.css';
 
+
+@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
+
 .wrapper {
     height: 100vh;
     overflow-x: hidden;
@@ -17,6 +20,10 @@
     transform-style: preserve-3d;
 }
 
+.egg {
+    filter: drop-shadow(16px 16px 20px rgb(217, 173, 255)) invert(50%);
+}
+
 .parallax__layer {
     position: absolute;
     top: 0;
@@ -28,18 +35,33 @@
 .sky {
     @include abstracts.layer('img/1.png', -525px, 2.75, 1);
 }
+.sky2 {
+    background-image: url('img/1.1.png');
+}
 
 .mountains {
     @include abstracts.layer('img/2.png', -400px, 2.33333333, 2);
 }
+.mountains2 {
+    background-image: url('img/2.1.png');
+}
+
 
 .trees2 {
     @include abstracts.layer('img/3.png', -250px, 1.833333333, 3);
 }
+.trees22 {
+    background-image: url('img/3.1.png');
+}
+
 
 .trees1 {
     @include abstracts.layer('img/4.png', -0, 1, 5);
 }
+.trees12 {
+    background-image: url('img/4.1.png');
+}
+
 
 .respo {
     @include abstracts.breakpoint() {
@@ -108,19 +130,26 @@
     position: absolute;
     left: 40px;
     top: 40px;
-
-    #texte{
+      
+    .glowIn {
         height: auto;
         width: 100%;
-        color: #0a2426;
+        color: #ffffff;
         text-align: center;
         font-weight: 400;
         font-size: 5.5rem;
         font-family: "DK Millefeuille";
+        text-align: center;
+        animation: glow 1s ease-in-out infinite alternate;
+        }
 
-
-        display:inline-block;
-        vertical-align: middle;
-        line-height: normal;
-    }
+        @-webkit-keyframes glow {
+            from {
+                text-shadow: 0 0 10px rgb(0, 0, 0), 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff;
+            }
+            
+            to {
+                text-shadow: 0 0 20px rgb(0, 0, 0), 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 60px #fff;
+            }
+        }
 }

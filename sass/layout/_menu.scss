@@ -7,13 +7,14 @@
         padding: 15px;
         display: flex;
         flex-direction: column;
+        gap: 50px;
 
         @include abstracts.breakpoint() {
             grid-area: contact;
             grid-area: unset;
             display: flex;
             flex-direction: column-reverse;
-            gap: 30px;
+            gap: 50px;
         }
         
         .section{
@@ -57,6 +58,7 @@
                         background-color: #a9c8a4;
                         border-radius: 30px;
                         font-weight: bolder;
+                        transition: 0.2s ease-in-out;
                     }
                 }
             }

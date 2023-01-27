@@ -45,6 +45,7 @@
                 img {
                     @include abstracts.size(70px, 70px);
                     filter: grayscale(100%);
+                    opacity: 0.2;
 
                     @include abstracts.breakpoint() {
                         @include abstracts.size(50px, 50px);
@@ -52,7 +53,7 @@
                     
                     &:hover {
                         filter: grayscale(0%);
-                        @include abstracts.size(75px, 75px);
+                        opacity: 1;
                     }
                 }
             }
