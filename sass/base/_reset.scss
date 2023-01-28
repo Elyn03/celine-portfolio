@@ -1,4 +1,7 @@
 @use "../abstracts";
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan Script&display=swap');
+
 
 * {
     padding: 0;
@@ -10,14 +13,5 @@ body {
     @include abstracts.size(100%, 100%);
     color: #d8e3d3;
     background-color: #092523;
-    font-family: "Montserrat";
-}
-
-@font-face {
-    font-family: "DK Millefeuille";
-    font-family: "Montserrat";
-    font-family: "Doggie";
-    src: url("../../fonts/DK\ Millefeuille.otf") format("otf");
-    src: url("../../fonts/Montserrat-Regular.ttf") format("ttf");
-    src: url("../../fonts/Doggie.ttf") format("ttf");
+    font-family: 'Quicksand', sans-serif;
 }

@@ -110,6 +110,10 @@
                 overflow: hidden;
                 @include abstracts.size(0, 100%);
                 transition: .5s ease;
+
+                @include abstracts.breakpoint() {
+                    display: none;
+                }
             }
 
             &:hover .overlay {

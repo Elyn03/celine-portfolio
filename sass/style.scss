@@ -4,9 +4,6 @@
 @use "components";
 @import 'node_modules/animate.css';
 
-
-@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
-
 .wrapper {
     height: 100vh;
     overflow-x: hidden;
@@ -99,7 +96,7 @@
         padding: 0px 30px;
         border-radius: 0 10px 50px 0;
         letter-spacing:10px;
-        font-family: "DK Millefeuille";
+        font-family: 'Kaushan Script', sans-serif;
 
         @include abstracts.breakpoint() {
             max-width: 350px;
@@ -138,7 +135,7 @@
         text-align: center;
         font-weight: 400;
         font-size: 5.5rem;
-        font-family: "DK Millefeuille";
+        font-family: 'Kaushan Script', sans-serif;
         text-align: center;
         animation: glow 1s ease-in-out infinite alternate;
         }
@@ -151,5 +148,9 @@
             to {
                 text-shadow: 0 0 20px rgb(0, 0, 0), 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 60px #fff;
             }
+        }
+
+        @include abstracts.breakpoint() {
+            font-size: 3.5rem;
         }
 }

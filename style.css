@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan Script&display=swap");
 @import 'node_modules/animate.css';
-@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
 * {
   padding: 0;
   margin: 0;
@@ -11,17 +12,9 @@ body {
   width: 100%;
   color: #d8e3d3;
   background-color: #092523;
-  font-family: "Montserrat";
+  font-family: "Quicksand", sans-serif;
 }
 
-@font-face {
-  font-family: "DK Millefeuille";
-  font-family: "Montserrat";
-  font-family: "Doggie";
-  src: url("../../fonts/DK Millefeuille.otf") format("otf");
-  src: url("../../fonts/Montserrat-Regular.ttf") format("ttf");
-  src: url("../../fonts/Doggie.ttf") format("ttf");
-}
 .debut .menu {
   grid-area: fix;
   padding: 15px;
@@ -35,7 +28,7 @@ body {
     grid-area: unset;
     display: flex;
     flex-direction: column-reverse;
-    gap: 50px;
+    gap: 100px;
   }
 }
 .debut .menu .section {
@@ -222,6 +215,11 @@ body {
   height: 0;
   width: 100%;
   transition: 0.5s ease;
+}
+@media screen and (max-width: 930px) {
+  .me .content .prez .overlay {
+    display: none;
+  }
 }
 .me .content .prez:hover .overlay {
   bottom: 0;
@@ -526,7 +524,7 @@ body {
   padding: 0px 30px;
   border-radius: 0 10px 50px 0;
   letter-spacing: 10px;
-  font-family: "DK Millefeuille";
+  font-family: "Kaushan Script", sans-serif;
 }
 @media screen and (max-width: 930px) {
   .debut .titre {
@@ -560,7 +558,7 @@ body {
   text-align: center;
   font-weight: 400;
   font-size: 5.5rem;
-  font-family: "DK Millefeuille";
+  font-family: "Kaushan Script", sans-serif;
   text-align: center;
   animation: glow 1s ease-in-out infinite alternate;
 }
@@ -570,6 +568,11 @@ body {
   }
   to {
     text-shadow: 0 0 20px rgb(0, 0, 0), 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 60px #fff;
+  }
+}
+@media screen and (max-width: 930px) {
+  .name {
+    font-size: 3.5rem;
   }
 }
 
