@@ -17,10 +17,6 @@
     transform-style: preserve-3d;
 }
 
-.egg {
-    filter: drop-shadow(16px 16px 20px rgb(217, 173, 255)) invert(50%);
-}
-
 .parallax__layer {
     position: absolute;
     top: 0;
@@ -32,39 +28,14 @@
 .sky {
     @include abstracts.layer('img/1.png', -525px, 2.75, 1);
 }
-.sky2 {
-    background-image: url('img/1.1.png');
-}
-
 .mountains {
     @include abstracts.layer('img/2.png', -400px, 2.33333333, 2);
 }
-.mountains2 {
-    background-image: url('img/2.1.png');
-}
-
-
 .trees2 {
     @include abstracts.layer('img/3.png', -250px, 1.833333333, 3);
 }
-.trees22 {
-    background-image: url('img/3.1.png');
-}
-
-
 .trees1 {
     @include abstracts.layer('img/4.png', -0, 1, 5);
-}
-.trees12 {
-    background-image: url('img/4.1.png');
-}
-
-
-.respo {
-    @include abstracts.breakpoint() {
-        @include abstracts.size(auto, 100vw);
-    background-color: aqua;
-    }
 }
 
 .debut {

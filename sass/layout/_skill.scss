@@ -20,6 +20,10 @@
             opacity: 25%;
             gap: 20px;
             
+            // &:nth-child(even) {
+            //     background-color: lightyellow;
+            // }
+
             @include abstracts.breakpoint() {
                 @include abstracts.size(auto, 500px);
             }

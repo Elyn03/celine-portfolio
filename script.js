@@ -1,10 +1,3 @@
-let keyboard = ''
-const sky = document.getElementById('sky')
-const mountains = document.getElementById('mountains')
-const trees2 = document.getElementById('trees2')
-const trees1 = document.getElementById('trees1')
-const para = document.getElementById('ara')
-
 /******** Back to Top ********/
 
 // const scrollup = document.querySelector("#btt");
@@ -40,22 +33,4 @@ document.querySelectorAll('a[href="#"]').forEach(anchor => {
           behavior: 'smooth'
       });
   });
-});
-
-document.addEventListener('keydown', function (event) {
-  keyboard += event.key;
-  if (keyboard.endsWith('huy')) {
-      console.log('blanc')
-      sky.classList.add('sky2')
-      mountains.classList.add('mountains2')
-      trees2.classList.add('trees22')
-      trees1.classList.add('trees12')
-      keyboard = ''
-  } if (keyboard.endsWith('cel')) {
-    sky.classList.remove('sky2')
-    mountains.classList.remove('mountains2')
-    trees2.classList.remove('trees22')
-    trees1.classList.remove('trees12')
-    keyboard = ''
-  }
 });
