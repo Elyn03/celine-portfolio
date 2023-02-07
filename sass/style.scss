@@ -2,7 +2,6 @@
 @use "layout";
 @use "abstracts";
 @use "components";
-@import 'node_modules/animate.css';
 
 .wrapper {
     height: 100vh;
@@ -81,7 +80,7 @@
         grid-template-areas: "me"
                              "skills"
                              "projects";
-
+        gap: 20px;
         @include abstracts.breakpoint() {
             grid-area: tout;
         }
