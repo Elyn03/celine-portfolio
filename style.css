@@ -231,7 +231,7 @@ body {
 .sk .content {
   padding: 30px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   gap: 20px;
   row-gap: 20px;
@@ -240,17 +240,11 @@ body {
   position: relative;
   height: auto;
   width: 300px;
-  max-width: 300px;
+  width: 100%;
   border: 3px solid #d8e3d3;
   border-radius: 20px;
-  opacity: 25%;
+  opacity: 0.4;
   gap: 20px;
-}
-@media screen and (max-width: 930px) {
-  .sk .content .skill {
-    height: auto;
-    width: 500px;
-  }
 }
 .sk .content .skill .type {
   margin: 25px;
@@ -266,13 +260,13 @@ body {
   gap: 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 30px;
 }
 .sk .content .skill .logos img {
   height: 70px;
   width: 70px;
   filter: grayscale(100%);
-  opacity: 0.2;
+  opacity: 0.4;
 }
 @media screen and (max-width: 930px) {
   .sk .content .skill .logos img {

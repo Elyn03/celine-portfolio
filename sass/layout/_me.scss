@@ -32,9 +32,7 @@
             .rotate-word {
                 display: inline;
                 margin-left: 10px;
-                font-size: 40px;
-                
-            
+                font-size: 40px;           
 
                 span {
                     width: max-content;
@@ -51,7 +49,6 @@
                     @include abstracts.breakpoint() {
                         left: 5px;
                     }
-                    
                 }
             
                 @keyframes rotateWords {
@@ -73,7 +70,6 @@
                     }
                 }
             }
-        
         }
 
         .blabla {
@@ -119,9 +115,7 @@
             &:hover .overlay {
                 bottom: 0;
                 height: 100%;
-
             }
-
         }
     }
 }
